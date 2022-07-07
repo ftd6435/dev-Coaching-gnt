@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 65.2%;
+}
+
+html body{
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* GENERIQUE */
+.cours, .campus, .facilities, .testimonials, .cta{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.title{
+    font-size: 3.6rem;
+    font-weight: 600;
+}
+
+p{
+    font-size: 1.4rem;
+    color: #777;
+    padding: 1rem;
+    font-weight: 300;
+    line-height: 2.2rem;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+/* START HEADER STYLING */
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('/img/banner.png');
+    background-position: center  center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 8rem;
+}
+
+nav img{
+    width: 150px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    display: inline-block;
+    position: relative;
+    padding: 0.8rem 1.2rem;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    display: block;
+    height: 0.2rem;
+    margin: auto;
+    background: #f44336;
+    transition: all 0.5s ease;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.text-box h1{
+    font-size: 6.2rem;
+}
+
+.text-box p{
+    margin: 1rem 0 4rem;
+    font-size: 1.4rem;
+}
+
+.btn{
+    padding: 1.2rem 3.4rem;
+    position: relative;
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.3rem;
+    border: 1px solid #fff;
+}
+
+nav .fa-solid{
+    display: none;
+}
+
+.btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+@media(max-width: 768px){
+    .text-box h1{
+        font-size: 2.5rem;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+
+    .nav-links ul{
+        padding-left: 1.8rem;
+    }
+    .nav-links{
+        background: #f44336;
+        position: absolute;
+        top: 0;
+        right: -200px;
+        height: 100vh;
+        width: 200px;
+        z-index: 2;
+        text-align: left;
+        transition: 1s;
+    }
+
+    nav .fa-solid{
+        display: block;
+        color: #fff;
+        font-size: 2.2rem;
+        cursor: pointer;
+        margin: 1rem;
+    }
+}
+/* END HEADER STYLING  */
+
+/* START COURS SECTION STYLING */
+.cours{
+    padding-top: 10rem;
+}
+
+.cours-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 2rem 1.2rem;
+    margin-bottom: 5%;
+    transition: 0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.cours-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 768px){
+    .row{
+        flex-direction: column;
+    }
+}
+/* END COURS SECTION STYLING */
+
+/* START CAMPUS SECTION STYLING */
+.campus{
+    padding-top: 5rem;
+}
+
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+
+.campus-col{
+    flex-basis: 32%;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(255, 0, 0, 0.7);
+}
+
+.layer h3{
+    font-size: 2.6rem;
+    font-weight: 500;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+/* END CAMPUS SECTION STYLING */
+
+/* START FACILITIES SECTION STYLING */
+.facilities{
+    padding-top: 5rem;
+}
+
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 5%;
+}
+
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facilities-col p{
+    padding: 0;
+}
+
+.facilities-col h3{
+    text-align: left;
+    margin-top: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+/* END FACILITIES SECTION STYLING */
+
+/* START TESTIMONIALS SECTION STYLING */
+.testimonials{
+    padding-top: 10rem;
+}
+
+.testimonials-col{
+    flex-basis: 44%;
+    text-align: left;
+    margin-bottom: 5%;
+    background: #fff3f3;
+    padding: 2.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+}
+
+.testimonials-col img{
+    height: 42px;
+    margin-left: 0.5rem;
+    margin-right: 3rem;
+    border-radius: 50%;
+}
+.testimonials-col p{
+    padding: 0;
+}
+.testimonials-col h3{
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.testimonials-col .fa-star, .testimonials-col .fa-star-half-stroke{
+    color: #f44336;
+}
+/* END TESTIMONIALS SECTION STYLING */
+
+/* START CALL TO ACTION SECTION STYLING */
+.cta{
+    padding: 10rem 0;
+    margin: 8rem auto;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.cta h1{
+    margin-bottom: 4rem;
+    padding: 0;
+    color: #fff;
+}
+
+@media(max-width: 768px){
+    .cta h1{
+        font-size: 2.4rem;
+    }
+}
+/* END CALL TO ACTION SECTION STYLING */
+
+/* START FOOTER SECTION STYLING */
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.footer h4{
+    margin-bottom: 2.5rem;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+.icons .fa-brands{
+    color: #f44336;
+    margin: 0 1.3rem;
+    padding: 1.8rem 0;
+    cursor: pointer;
+}
+
+.fa-heart{
+    color: #f44336;
+}
+/* END FOOTER SECTION STYLING */
