@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fontawesome Link  -->
+    <script src="https://kit.fontawesome.com/f2ac5646f5.js" crossorigin="anonymous"></script>
+
+    <!-- Liens des polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <title>University Pathé PK de B&NFD</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="img/logo.png" alt="Logo du site"></a>
+            <div class="nav-links" id="nav-links">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Acceuil</a></li>
+                    <li class="active"><a href="about.html">A Propos</a></li>
+                    <li><a href="cours.html">Cours</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>A Propos de Nous</h1>
+    </section>
+
+    <!-- ------------------ About us content ----------------------- -->
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>Avec mon cabinet de formation Wakanda High Tech</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum alias ea facere 
+                    sunt quidem doloribus sapiente culpa vitae, illo laborum iusto quaerat odit 
+                    expedita magni possimus suscipit totam cumque vel.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex quas cupiditate 
+                    autem fugit blanditiis nulla!
+                </p>
+                <a href="#" class="btn btn-red">EXPLORE NOW</a>
+            </div>
+            <div class="about-col">
+                <img src="/img/about.jpg" alt="about image">
+            </div>
+        </div>
+    </section>
+   
+
+    <!-- ------------------ Footer ----------------------- -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis veniam veritatis, 
+            hic accusamus eligendi quos <br> alias nobis laboriosam nam expedita natus voluptatibus, 
+            magni commodi tempora eveniet quis maxime a praesentium.
+        </p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram-square"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa-regular fa-heart"></i> Pathé PK_EBF</p>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- ********** JavaScript for the menu ******* -->
+    <script>
+        var navLinks = document.getElementById("nav-links");
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+    </script>
+</body>
+</html>
